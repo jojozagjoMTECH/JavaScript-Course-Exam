@@ -1,5 +1,6 @@
 describe('Computer', () => {
   let computer;
+  
 
   describe('constructor', () => {
     beforeEach(() => {

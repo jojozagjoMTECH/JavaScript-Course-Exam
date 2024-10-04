@@ -28,14 +28,14 @@ let characters = [
 class CharacterService {
   constructor() {}
   getAllCharacters() {
-    return new Promise((reject, resolve) => {
+    return new Promise((resolve, reject) => {
       resolve(characters);
     });
   }
   getCharacter(characterId) {
     return new Promise((resolve, reject) => {
-      if (characterId) {
-        let character = characters.find(char => char.id == char.id);
+      if (characterId !== undefined) {
+        let character = characters.find(char => char.id == character.id);
         resolve(character);
       } else {
         reject('something went wrong');
